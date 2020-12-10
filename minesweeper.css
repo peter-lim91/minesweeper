@@ -81,3 +81,7 @@ div.hidden:hover {
 div.marked, div.marked:hover {
   background: no-repeat center/60% url("images/mark.svg") deepskyblue;
 }
+
+.opaque {
+  opacity: 50%;
+}
