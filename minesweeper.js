@@ -34,6 +34,7 @@ function resetBoard() {
   processBoard(numberOfMinesSurrounding);
   displayMessage("Let's Play!");
   addCheckForWinListener();
+  stopRickRoll();
 }
 
 function setupBoard() {
@@ -181,8 +182,13 @@ function getBounds(rowOrCol) {
   return validRange;
 }
 
+
+const rickRoll = new Audio('./rickrolld.mp3');
 function activateRickRoll() {
-  const audio = new Audio();
-  audio.src = './rickrolld.mp3';
-  audio.play();
+  rickRoll.play();
+}
+
+function stopRickRoll() {
+  rickRoll.pause();
+  rickRoll.currentTime = 0;
 }
