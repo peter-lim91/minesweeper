@@ -178,5 +178,11 @@ function getBounds(rowOrCol) {
       validRange.push(rowOrCol + i)
     }
   }
-  return validRange
+  return validRange;
+}
+
+function activateRickRoll() {
+  const audio = new Audio();
+  audio.src = './rickrolld.mp3';
+  audio.play();
 }
